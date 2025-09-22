@@ -44,14 +44,6 @@ class CalculatorViewController: UIViewController {
             backButton.isHidden = true
             ACButton.isHidden = false
         }
-      
-        //        if scrollView.contentSize.width < scrollView.frame.width {
-        //            calculationLabel.font = calculationLabel.font.withSize(70)
-        //        }
-                
-        //        if scrollView.contentSize.width >= (scrollView.frame.width - 5) {
-        //            calculationLabel.font = calculationLabel.font.withSize(50)
-        //        }
     }
     
     
@@ -192,7 +184,7 @@ class CalculatorViewController: UIViewController {
     }
     
     private func isOperator(_ char: String) -> Bool {
-        let operators: [String] = ["+", "-", "x", "/", "*", "+/-", "%", "."]
+        let operators: [String] = ["+", "-", "x", "÷", "*", "+/-", "%", "."]
         return operators.contains(char)
     }
     

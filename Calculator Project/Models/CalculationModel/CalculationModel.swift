@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct CalculationModel: Codable {
+struct CalculationModel {
     let calculation: String
     let equation: String
     
@@ -25,7 +25,7 @@ struct CalculationModel: Codable {
         let expression = calculation
 
         // 1. Regex: match numbers (int or decimal) or operators
-        let pattern = #"\d+(\.\d+)?|[+\-*/x]"#
+        let pattern = #"\d+(\.\d+)?|[+\-*/x÷]"#
         let regex = try! NSRegularExpression(pattern: pattern)
 
         // 2. Tokenize
@@ -38,10 +38,9 @@ struct CalculationModel: Codable {
                 return token + ".0"
             } else if token == "x" {
                 return "*"
+            } else if token == "÷" {
+                return "/"
             }
-//            else if token == "%" {
-//                return "/100"
-//            }
             return token
         }
 

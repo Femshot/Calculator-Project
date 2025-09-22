@@ -19,7 +19,6 @@ class CalculatorButton: UIButton {
         setButton()
     }
     
-    
     func setButton() {
         layer.cornerRadius = frame.width / 2
         titleLabel?.font = UIFont.systemFont(ofSize: 35)

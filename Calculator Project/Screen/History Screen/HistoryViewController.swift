@@ -46,7 +46,6 @@ class HistoryViewController: UIViewController {
     }
     
     @IBAction func showEditRadioButtons(_ sender: Any) {
-        
         hideEditingButton.toggle()
         tableView.reloadData()
     }
